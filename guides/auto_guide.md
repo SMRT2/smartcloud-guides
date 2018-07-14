@@ -1,5 +1,5 @@
 ----------------------------------------------------
-SMARTSPACE COIN SIMPLE AUTO MASTER NODE SETUP GUIDE 
+SMARTCLOUD COIN SIMPLE AUTO MASTER NODE SETUP GUIDE 
 ----------------------------------------------------
 
 -----------------------------
@@ -8,26 +8,26 @@ Windows wallet setup
 
 Download windows wallet from these locations:
 for 32bit: 
-https://github.com/smrt-crypto/smrt/releases/download/v1.1.0.5/smrt-qt-win32.exe
+
 for 64bit: 
-https://github.com/smrt-crypto/smrt/releases/download/v1.1.0.5/smrt-qt-win64.exe
+
 
 run it. if you cannot get it to sync. got to windows start and type:
 %appdata% 
 you should see "roaming" click on it. it will take you to a folder.
 
-find the "SMRT" folder and double click on it.
-right click on "smrt.conf" and open it with notepad or any text editor.
+find the "SMRTC" folder and double click on it.
+right click on "smrtc.conf" and open it with notepad or any text editor.
 When file is loaded, add more nodes by copy and paste this:
 
-* addnode=45.77.52.239:52310
-* addnode=31.171.251.72:52310
-* addnode=167.99.70.168:52310
-* addnode=144.202.78.25:52310
-* addnode=149.28.37.210:52310
-* addnode=74.108.58.91:52310
-* addnode=206.189.186.158:52310
-* addnode=107.174.250.215:52310
+* addnode=
+* addnode=
+* addnode=
+* addnode=
+* addnode=
+* addnode=
+* addnode=
+* addnode=
 
 save file and exit.
 
@@ -47,7 +47,7 @@ now move on to linux vps setup.
 Log into your linux Vps and type each commands each number lines:
 
 1. cd
-2. wget https://raw.githubusercontent.com/telostia/smrt2-guides/master/guides/smart_auto.sh
+2. wget https://raw.githubusercontent.com/telostia/smartcloud-guides/master/guides/smartc_auto.sh
 3. bash smart_auto.sh 
 
 when asked to paste genekey. right click to paste your genkey in.
@@ -58,9 +58,9 @@ when asked to paste genekey. right click to paste your genkey in.
 Windows wallet to add masternode 
 ---------------------------------
 
-1.   Open the SMRT Coin Desktop Wallet. 
+1.   Open the SMRTC Coin Desktop Wallet. 
 2.   Go to RECEIVE and create a New Address: MN1 
-3.   Send 5000 smrt to MN1. 
+3.   Send 5000 smrtc to MN1. 
 4.   Wait for confirmations. 
 5.   Go to Tools -> "Debug console - Console" 
 6.   Type the following command: masternode outputs 
