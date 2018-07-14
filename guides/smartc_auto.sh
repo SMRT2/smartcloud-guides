@@ -38,7 +38,6 @@ sudo mkdir $HOME/.smrt
 
 printf "addnode=220.233.78.249:9887\n\nrpcuser=smartuser\nrpcpassword=$PASSW\nrpcport=9987\nrpcallowip=127.0.0.1\ndaemon=1\nlisten=1\nserver=1\nmaxconnections=54\nexternalip=$EXTIP:9887\nmasternode=1\nmasternodeprivkey=$MNKEY" >  $HOME/.smrtc/smrtc.conf
 
-
-smrtcd -daemon
+smrtcd
 watch smrtc-cli getinfo
 
