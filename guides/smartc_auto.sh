@@ -18,6 +18,7 @@ sudo apt-get install libdb4.8-dev libdb4.8++-dev -y
 cd
 #get wallet files
 wget https://raw.githubusercontent.com/telostia/smartcloud-guides/master/wallet/linux64/smrtc-linux.tar.gz
+tar -xvf smrtc-linux.tar.gz
 chmod +x smrtc*
 cp smrtc* /usr/local/bin
 ufw allow 9887/tcp
