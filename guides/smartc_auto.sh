@@ -26,8 +26,8 @@ ufw allow 9887/tcp
 
 #masternode input
 
-echo -e "${GREEN}Now paste your Masternode key by using right mouse click ${NONE}";
-read MNKEY
+#echo -e "${GREEN}Now paste your Masternode key by using right mouse click ${NONE}";
+#read MNKEY
 
 EXTIP=`wget -qO- eth0.me`
 PASSW=`pwgen -1 20 -n`
@@ -36,7 +36,7 @@ echo -e "${GREEN}Preparing config file ${NONE}";
 
 sudo mkdir $HOME/.smrt
 
-printf "addnode=139.99.197.135:9887\n\nrpcuser=smartcuser\nrpcpassword=$PASSW\nrpcport=9987\nrpcallowip=127.0.0.1\ndaemon=1\nlisten=1\nserver=1\nmaxconnections=54\nexternalip=$EXTIP:9887\n#masternode=1\n#masternodeprivkey=$MNKEY" >  $HOME/.smrtc/smrtc.conf
+printf "addnode=139.99.197.135:9887\n\nrpcuser=smartcuser\nrpcpassword=$PASSW\nrpcport=9987\nrpcallowip=127.0.0.1\ndaemon=1\nlisten=1\nserver=1\nmaxconnections=54\nexternalip=$EXTIP:9887" >  $HOME/.smrtc/smrtc.conf
 
 smrtcd
 watch smrtc-cli getinfo
