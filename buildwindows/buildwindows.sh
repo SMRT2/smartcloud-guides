@@ -2,6 +2,7 @@
 sudo apt update
 sudo apt upgrade
 sudo apt install build-essential libtool autotools-dev automake pkg-config bsdmainutils curl git
+sudo apt install g++-mingw-w64-x86-64
 sudo update-alternatives --config x86_64-w64-mingw32-g++ # Set the default mingw32 g++ compiler option to posix.
 PATH=$(echo "$PATH" | sed -e 's/:\/mnt.*//g') # strip out problematic Windows %PATH% imported var
 cd depends
