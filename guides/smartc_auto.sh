@@ -17,6 +17,7 @@ sudo apt-get update -y
 sudo apt-get install libdb4.8-dev libdb4.8++-dev -y
 cd
 #get wallet files
+rm smrtc-linux.tar.gz
 wget https://raw.githubusercontent.com/telostia/smartcloud-guides/master/wallet/linux64/smrtc-linux.tar.gz
 tar -xvf smrtc-linux.tar.gz
 chmod +x smrtc*
@@ -27,8 +28,8 @@ ufw allow 9887/tcp
 
 #masternode input
 
-#echo -e "${GREEN}Now paste your Masternode key by using right mouse click ${NONE}";
-#read MNKEY
+echo -e "${GREEN}Now paste your Masternode key by using right mouse click ${NONE}";
+read MNKEY
 
 EXTIP=`wget -qO- eth0.me`
 PASSW=`pwgen -1 20 -n`
