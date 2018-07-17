@@ -21,6 +21,7 @@ wget https://raw.githubusercontent.com/telostia/smartcloud-guides/master/wallet/
 tar -xvf smrtc-linux.tar.gz
 chmod +x smrtc*
 cp smrtc* /usr/local/bin
+rm smrtc*
 ufw allow 9887/tcp
 
 
@@ -38,6 +39,6 @@ sudo mkdir $HOME/.smrtc
 
 printf "addnode=139.99.197.135:9887\n\nrpcuser=smartcuser\nrpcpassword=$PASSW\nrpcport=9987\nrpcallowip=127.0.0.1\ndaemon=1\nlisten=1\nserver=1\nmaxconnections=54\nexternalip=$EXTIP:9887" >  $HOME/.smrtc/smrtc.conf
 
-smrtcd -daemon
+smrtcd
 watch smrtc-cli getinfo
 
