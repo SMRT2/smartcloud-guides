@@ -21,7 +21,7 @@ wget https://raw.githubusercontent.com/telostia/smartcloud-guides/master/wallet/
 tar -xvf smrtc-linux.tar.gz
 chmod +x smrtc*
 cp smrtc* /usr/local/bin
-rm smrtc*
+#rm smrtc*
 ufw allow 9887/tcp
 
 
