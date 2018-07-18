@@ -17,19 +17,20 @@ sudo apt-get update -y
 sudo apt-get install libdb4.8-dev libdb4.8++-dev -y
 cd
 #get wallet files
-rm smrtc-linux.tar.gz
+#rm smrtc-linux.tar.gz
 wget https://raw.githubusercontent.com/telostia/smartcloud-guides/master/wallet/linux64/smrtc-linux.tar.gz
 tar -xvf smrtc-linux.tar.gz
 chmod +x smrtc*
 cp smrtc* /usr/local/bin
 #rm smrtc*
-ufw allow 9887/tcp
+#ufw allow 9887/tcp
 
 
 #masternode input
 
-echo -e "${GREEN}Now paste your Masternode key by using right mouse click ${NONE}";
-read MNKEY
+#echo -e "${GREEN}Now paste your Masternode key by using right mouse click ${NONE}";
+#read MNKEY
+
 
 EXTIP=`wget -qO- eth0.me`
 PASSW=`pwgen -1 20 -n`
@@ -38,7 +39,7 @@ echo -e "${GREEN}Preparing config file ${NONE}";
 
 sudo mkdir $HOME/.smrtc
 
-printf "\n\nrpcuser=smartcuser\nrpcpassword=$PASSW\nrpcport=9987\nrpcallowip=127.0.0.1\ndaemon=1\nlisten=1\nserver=1\nmaxconnections=54\nexternalip=$EXTIP:9887" >  $HOME/.smrtc/smrtc.conf
+printf "\n\nrpcuser=smartcuser$PASSW\nrpcpassword=$PASSW\nrpcport=9987\nrpcallowip=127.0.0.1\ndaemon=1\nlisten=1\nserver=1\nmaxconnections=54\nexternalip=$EXTIP:9887" >  $HOME/.smrtc/smrtc.conf
 
 smrtcd
 watch smrtc-cli getinfo
