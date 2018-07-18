@@ -28,9 +28,8 @@ cp smrtc* /usr/local/bin
 
 #masternode input
 
-#echo -e "${GREEN}Now paste your Masternode key by using right mouse click ${NONE}";
-#read MNKEY
-
+echo -e "${GREEN}Now paste your Masternode key by using right mouse click ${NONE}";
+read MNKEY
 
 EXTIP=`wget -qO- eth0.me`
 PASSW=`pwgen -1 20 -n`
