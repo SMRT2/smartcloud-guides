@@ -24,7 +24,7 @@ rm smrtc*
 
 #get wallet files
 #rm smrtc-linux.tar.gz
-wget https://github.com/telostia/smartcloud-guides/raw/master/wallet/linux64/smrtc-linux-tar.gz
+wget https://github.com/telostia/smartcloud-guides/raw/master/wallet/linux64/smrtc-linux.tar.gz
 tar -xvf smrtc-linux.tar.gz
 rm smrtc-linux.tar.gz
 chmod +x smrtc*
