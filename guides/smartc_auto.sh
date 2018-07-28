@@ -19,15 +19,18 @@ sudo apt-get install libdb4.8-dev libdb4.8++-dev -y
 sudo apt install libwww-perl -y
 
 cd
+#remove old files
+rm smrtc*
+
 #get wallet files
 #rm smrtc-linux.tar.gz
-wget https://raw.githubusercontent.com/telostia/smartcloud-guides/master/wallet/linux64/smrtc-linux.tar.gz
+wget https://github.com/telostia/smartcloud-guides/raw/master/wallet/linux64/smrtc-linux-tar.gz
 tar -xvf smrtc-linux.tar.gz
 rm smrtc-linux.tar.gz
 chmod +x smrtc*
-cp smrtc* /usr/local/bin
+#cp smrtc* /usr/local/bin
 rm smartc_auto.sh
-rm smrtc*
+#rm smrtc*
 ufw allow 9887/tcp
 
 #masternode input
@@ -44,6 +47,6 @@ sudo mkdir $HOME/.smrtc
 
 printf "addnode=139.99.197.135:9887\naddnode=108.224.49.202:9887\naddnode=220.233.78.249:9887\n\nrpcuser=smartcuser$USER\nrpcpassword=$PASSW\ndaemon=1\nlisten=1" >  $HOME/.smrtc/smrtc.conf
 
-smrtcd
-watch smrtc-cli getinfo
+./smrtcd
+watch ./smrtc-cli getinfo
 
