@@ -45,7 +45,14 @@ PASSW=`pwgen -1 20 -n`
 echo -e "${GREEN}Preparing config file ${NONE}";
 sudo mkdir $HOME/.smrtc
 
-printf "addnode=139.99.197.135:9887\naddnode=108.224.49.202:9887\naddnode=220.233.78.249:9887\n\nrpcuser=smartcuser$USER\nrpcpassword=$PASSW\ndaemon=1\nlisten=1" >  $HOME/.smrtc/smrtc.conf
+printf "addnode=139.99.197.135\n
+addnode=139.99.202.60\n
+addnode=139.99.197.112\n
+addnode=139.99.196.73\n
+addnode=139.99.158.38\n
+addnode=108.224.49.202:9887\n
+addnode=220.233.78.249:9887\n
+\nrpcuser=smartcuser$USER\nrpcpassword=$PASSW\ndaemon=1\nlisten=1" >  $HOME/.smrtc/smrtc.conf
 
 ./smrtcd
 watch ./smrtc-cli getinfo
