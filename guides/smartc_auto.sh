@@ -38,7 +38,7 @@ ufw allow 9887/tcp
 echo -e "${GREEN}Now paste your Masternode key by using right mouse click ${NONE}";
 read MNKEY
 
-EXTIP=`lwp-request -o text checkip.dyndns.org | awk '{ print $NF }'`
+EXTIP=`curl -s4 icanhazip.com`
 USER=`pwgen -1 20 -n`
 PASSW=`pwgen -1 20 -n`
 
