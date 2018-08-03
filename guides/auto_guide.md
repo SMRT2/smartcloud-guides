@@ -46,7 +46,7 @@ now move on to linux vps setup.
 ----------------------
 Log into your linux Vps and copy the below line and press enter:
 
-*cd && bash -c "$(wget -O - https://raw.githubusercontent.com/telostia/smartcloud-guides/master/guides/smartc_auto.sh)"
+* cd && bash -c "$(wget -O - https://raw.githubusercontent.com/telostia/smartcloud-guides/master/guides/smartc_auto.sh)"
 
 when asked to paste genkey, right click your mouse and press enter.
 
