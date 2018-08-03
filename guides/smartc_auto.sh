@@ -54,4 +54,3 @@ addnode=220.233.78.249\n
 
 ./smrtcd
 watch ./smrtc-cli getinfo
-

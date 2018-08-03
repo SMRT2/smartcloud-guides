@@ -44,13 +44,11 @@ now move on to linux vps setup.
 -----------------------
 ### Linux VPS setup
 ----------------------
-Log into your linux Vps and copy the below lines and press enter:
+Log into your linux Vps and copy the below line and press enter:
 
-```
-bash -c "$(wget -O - https://raw.githubusercontent.com/telostia/smartcloud-guides/master/guides/smartc_auto.sh)"
-```
+* bash -c "$(wget -O - https://raw.githubusercontent.com/telostia/smartcloud-guides/master/guides/smartc_auto.sh)"
 
-when asked to paste genekey. right click to paste your genkey in.
+when asked to paste genkey, right click your mouse and press enter.
 
 
 
