@@ -1,4 +1,5 @@
 #get libs
+chmod 777 ./depends/config.*
 sudo apt update
 sudo apt upgrade
 sudo apt install build-essential libtool autotools-dev automake pkg-config bsdmainutils curl git
